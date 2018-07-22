@@ -18,8 +18,18 @@ function main() {
     nPixelsX: 64,
     nPixelsY: 32
   });
-  screen.resetBuffer();
-  screen.render();
+
+  let lastRender = 0;
+
+  const loop = ts => {
+    const elapsed = ts - lastRender;
+
+    screen.resetBuffer();
+    screen.render(() => window.requestAnimationFrame(loop));
+    lastRender = ts;
+  };
+
+  window.requestAnimationFrame(loop);
 }
 
 window.onload = function() {
