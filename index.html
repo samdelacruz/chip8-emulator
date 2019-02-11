@@ -1,7 +1,20 @@
 <html>
   <head><title>Chip8Emu</title></head>
+  <link rel="stylesheet" href="style.css">
 <body>
-  <div id="app"/>
+  <div class="grid-container">
+    <div id="app" class="canvas-container"></div>
+    <div class="controls-container">
+      <input name="file" type="file" id="file"/>
+    </div>
+    <div class="debug-container">
+      <textarea style="width: 400px" name="debug" id="debug" rows="20"></textarea>
+    </div>
+    <div class="keyboard-container">
+      <div class="keyboard" id="keyboard">
+      </div>
+    </div>
+  </div>
   <script src="./index.ts"></script>
 </body>
 </html>

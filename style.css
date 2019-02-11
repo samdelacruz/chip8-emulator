@@ -1,0 +1,66 @@
+textarea#debug {
+  border: none;
+  font-size: 14;
+  font-family: 'Courier New', Courier, monospace;
+  color: green;
+  background-color: black;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.canvas-container {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls-container {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.debug-container {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.keyboard-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.keyboard {
+  flex: 1;
+  background-color: black;
+  width: 90px;
+  display: "flex";
+  flex-wrap: wrap;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: "center"
+}
+
+.keyboard > button {
+  width: 30px;
+}
+
+.keyboard > button.key-0 {
+  width: 90px;
+}
